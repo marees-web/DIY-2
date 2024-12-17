@@ -1,0 +1,103 @@
+.container1{
+ 
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid red;
+}
+.box1{
+    width: 100px;
+    height: 90px;
+    background-color: red;
+    margin: 5px;
+  
+    
+}
+.boxa{
+    width: 100px;
+    height: 90px;
+    background-color: red;
+    margin: 5px;
+   
+    
+}
+.boxb{
+    width: 100px;
+    height: 90px;
+    background-color: red;
+    margin: 5px;
+   
+    
+}
+.container2{
+    
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    border: 1px solid red;
+    justify-content: space-between;
+    margin: 20px;
+}
+.box2{
+    width: 30px;
+    height: 90px;
+    background-color: aqua;
+}
+.box3{
+    width: 80px;
+    height: 20px;
+    background-color: green;
+    align-self: center;
+}
+.box4{
+    width: 30px;
+    height: 30px;
+    background-color: teal;
+    align-self: center;
+}
+.box5{
+    width: 90px;
+    height: 40px;
+    background-color: blue;
+    align-self: center;
+}
+.container3{
+    border: 2px solid blue;
+
+}
+.wrapper{
+    width: 80%;
+   display: flex;
+   margin: auto;
+   padding: 1rem;
+   gap: 1.5rem;
+   flex-wrap: wrap;
+    border: 2px solid green;
+   
+}
+
+.para1{
+    background-color: blue;
+    width: 30%;
+}
+.para2{
+    background-color: pink;
+    width: 30%;
+}
+.para3{
+    background-color: khaki;
+    width: 30%;
+}
+.para4{
+    background-color: red;
+ width: 47%;
+
+}
+.para5{
+    background-color: yellow;
+    width: 47%;
+    
+}

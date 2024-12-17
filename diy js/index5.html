@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let array = [1,2,3,4,5];
+        let arr1 = [6,7,8];
+        let arr2 = [
+            ...arr1,
+            ...array,
+            'welcome',
+            'to',
+            'edureka'
+        ]
+        arr2.push('yes');
+        console.log(arr2);
+        
+        restaurantList = [
+            {
+                id:1,
+                restaurantName : 'KFC',
+                address: 'anand vibar',
+                city:'Bangalore',
+            },
+            {
+                id:1,
+                restaurantName : 'pizza At',
+                address: 'kayal vibar',
+                city:'Pune',
+            },
+            {
+                id:1,
+                restaurantName : 'Dominoes',
+                address: 'Vikas vibar',
+                city:'Mumbai',
+            },
+            {
+                id:4,
+                restaurantName : 'Cadbury',
+                address: 'Nikas vibar',
+                city:'Bangalore',
+            },
+        ];
+        let userData = [
+            {
+                userId:1,
+                id:1,
+                title:'salviona pasta',
+                completed:true,
+            },
+            {
+                userId:1,
+                id:2,
+                title:'salviona peporoni pasta',
+                completed:false,
+            },
+            {
+                userId:1,
+                id:3,
+                title:'salviona origami pasta',
+                completed:true,
+            },
+            {
+                userId:1,
+                id:4,
+                title:'salviona peanut pasta',
+                completed:false,
+            },
+            {
+                userId:1,
+                id:5,
+                title:'salviona nutella pasta',
+                completed:true,
+            },
+            {
+                userId:1,
+                id:6,
+                title:'salviona eclaire pasta',
+                completed:true,
+            },
+        ];
+        const getData = () =>{
+            const myPromise = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve(userData);
+                  },3000)
+            });
+            return myPromise;
+        };
+       
+
+        const myFun = async() =>{
+            const x = await getData();
+            console.log(x);
+            x.map((item) =>{
+                console.log(item.title);
+            });
+        };
+
+        myFun();
+
+        const spreadFun = () =>{
+            let newArr = [...restaurantList,[1,2,3]];
+            console.log(newArr);
+        };
+        spreadFun();
+
+
+        const restFun = (...arg) => {
+              arg.map((ele) =>{
+                console.log(ele);
+              });
+        };
+        restFun(...restaurantList);
+
+    </script>
+</body>
+</html>

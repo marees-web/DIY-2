@@ -1,0 +1,52 @@
+body{
+    background-color: teal;
+}
+div{
+    width: 600px;
+    margin-left: 30%;
+    margin-top: 5%;
+    height: 500px;
+    background-color: white;
+    color: black;
+    position: relative;
+    display: inline-block;
+    
+}
+h1{
+    font-weight: bold;
+    font-size: 2cm;
+    text-align: center;
+    justify-content: center;
+    margin-top: 2%;
+
+}
+.one{
+    border: 2;
+    border-color: black;
+    border-style: solid;
+    table-layout: 100%;
+    margin: 20%;
+    column-rule-style: solid;
+    outline-width: 100%
+
+
+    
+    
+}
+#five{
+   
+}
+#two{
+    border: 3;
+    border-color: black;
+    border-style: solid;
+    table-layout: auto;
+    display: inline-block;
+    margin-left: 20%;
+    column-rule-style: solid;
+
+
+}
+button:hover{
+    background-color: cyan;
+}

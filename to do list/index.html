@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>ToDo List</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    
+</head>
+<body>
+    <div>
+        <h1> welcome </h1>
+        <input type="text" name="list" id="dolist">
+        <button   onclick="change()">Add</button><br>
+    
+
+        <ul id="add">
+          
+           
+           <li> Type above
+            <button  onclick="deleteItems(event)">Delete</button>
+            </li>
+        </ul>
+
+    </div>  
+    <script>
+        var input = document.getElementById('dolist')
+        var output = document.getElementById('add') 
+        function change(){
+           var listed =  document.createElement("li")
+            listed.innerHTML = input.value + "<button onclick='deleteItems(event)'>Delete</button>"
+            output.append(listed)
+
+        }
+       function deleteItems(event){
+            event.target.parentElement.remove()
+        }
+
+    </script>  
+    
+</body>
+</html>

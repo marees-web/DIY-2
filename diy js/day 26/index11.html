@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script >
+        let arr1=[
+            {restaurant:'KFC',averageRating:4.0},
+            {restaurant:'Domino',averageRating:4.6},
+            {restaurant:'PizzaAt',averageRating:4.0},
+            {restaurant:'Taiwanil',averageRating:3.5},
+            {restaurant:'Coffedine',averageRating:3.7},
+        ]
+       const ratingData=[
+        {restaurant:'KFC',rating:3.0},
+        {restaurant:'AFC',rating:4.0},
+        {restaurant:'GFC',rating:4.5},
+        {restaurant:'BFC',rating:5.0},
+        {restaurant:'LFC',rating:3.7},
+        {restaurant:'MFC',rating:4.7},
+        {restaurant:'NFC',rating:1.8},
+        {restaurant:'KFC',rating:4.0}
+
+       ];
+
+       const avgRating =() =>{
+        const headers =Array.from(
+            new Set(ratingData.map(({restaurant})=>restaurant))
+
+       );
+       let arr =[];
+       headers.map((head)=>{
+        let total=0;
+        let count=0;
+        const filteredRatingData =ratingData.filter(
+        (obj) => obj.restaurant==head
+       );
+      
+       filteredRatingData.map((item)=>{
+        total=filteredRatingData.reduce((prev,next)=>prev +next.rating,0);
+        count++;
+       });
+       arr.push({restaurant:head,averageRating:(total/count).toFixed(2)});
+    });
+       return arr;
+    };
+    const arr=avgRating();
+    console.log(arr);
+    console.log(arr.filter((item)=>item.averageRating>=4));
+
+    </script>
+</body>
+</html>

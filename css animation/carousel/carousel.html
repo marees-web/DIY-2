@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carousel</title>
+    <link rel="stylesheet" href="../carousel/carousel.css">
+
+
+</head>
+
+<body>
+    <h1>Carousel</h1>
+    <div class="scene">
+        <div class="carousel show-6">
+            <div class="carousel_cell">1</div>
+            <div class="carousel_cell">2</div>
+            <div class="carousel_cell">3</div>
+            <div class="carousel_cell">4</div>
+            <div class="carousel_cell">5</div>
+            <div class="carousel_cell">6</div>
+            <div class="carousel_cell">7</div>
+            <div class="carousel_cell">8</div>
+            <div class="carousel_cell">9</div>
+            <div class="carousel_cell">10</div>
+        </div>
+    </div>
+    <div class="buttons">
+        <button class="previous" id="remove">previous</button>
+        <button class="next" id="add">Next</button>
+    </div>
+    <script>
+        const previousbutton = document.querySelector('.previous');
+        const nextbutton = document.querySelector('.next');
+        const carousel = document.querySelector('.carousel');
+        let cellIndex = 6;
+        previousbutton.addEventListener('click', () => {
+            carousel.classList.remove('show-' + cellIndex);
+            if (cellIndex == 1) {
+                cellIndex = 10
+            } else {
+                cellIndex--;
+            }
+            carousel.classList.add('show-' + cellIndex);
+
+        });
+        nextbutton.addEventListener('click', () => {
+            carousel.classList.remove('show-' + cellIndex);
+            if (cellIndex == 10) {
+                cellIndex = 1
+            } else {
+                cellIndex++;
+            }
+            carousel.classList.add('show-' + cellIndex);
+        })
+    </script>
+
+</body>
+
+</html>

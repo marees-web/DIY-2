@@ -1,0 +1,40 @@
+body{
+    background-image: url(image.jpg) ;
+    background-blend-mode: lighten;
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+
+    
+}
+div{
+    display: inline-block;
+    align-content: center;
+    text-align: center;
+    padding-left: 20%;
+    padding-top: 3%;
+
+}
+h1{
+    font-weight: bolder;
+    font-size: 2cm;
+    color: red;
+    font-family: lucida calligraphy;
+    text-shadow: 5px 8px 9px ;
+    
+}
+#dolist{
+    width: 400px;
+    height: 20px;
+
+}
+button:hover{
+    color: white;
+    background-color: black;
+}
+ul,li{
+    font-weight: bolder;
+    
+    color: red;
+}
+

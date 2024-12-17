@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mainbox{
+            border: 2px solid red;
+            height: 400px;
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            overflow-y: auto;
+        }
+        .mainbox > div{
+            flex: 1;
+            border: 2px solid blue;
+            padding: 0.5rem;
+            min-width: 200px;
+        }
+        .addressBox{
+            padding: 0.5rem;
+            border: 2px solid green;
+        }
+    </style>
+   
+</head>
+<body id="body">
+
+   
+    <script>
+      
+
+     class EmployeeData{
+        emp1 = {
+            name: 'Gugan',
+            empId:456,
+            mailid:'mmm@gmail.com',
+            Address:{
+                City:'Karur',
+                District:'salem',
+                Pin:678900
+            },
+            Interests: ['Swimmimg','baking' , 'cooking']
+        };
+        emp2 = {
+            name: 'Bugan',
+            empId:4564,
+            mailid:'mxm@gmail.com',
+            Address:{
+                City:'Korur',
+                District:'salem',
+                Pin:678900
+            },
+            Interests: ['Swimmimg','baking' , 'cooking']
+
+        };
+        emp3 = {
+            name: 'Gagan',
+            empId:4567,
+            mailid:'amm@gmail.com',
+            Address:{
+                City:'Karpr',
+                District:'salem',
+                Pin:678900
+            },
+            Interests: ['Swimmimg','baking' , 'cooking']
+
+        };
+        emp4 = {
+            name: 'Pugan',
+            empId:4568,
+            mailid:'mpm@gmail.com',
+            Address:{
+                City:'Kapur',
+                District:'salem',
+                Pin:678900
+            },
+            Interests: ['Swimmimg','baking' , 'cooking']
+
+        };
+        emp5 = {
+            name: 'Gugon',
+            empId:4596,
+            mailid:'mkm@gmail.com',
+            Address:{
+                City:'Kaour',
+                District:'salem',
+                Pin:678900
+            },
+            Interests: ['Swimmimg','baking' , 'cooking']
+
+        };
+     }
+
+
+     
+    const empData = new EmployeeData();
+    const body = document.querySelector('#body');
+    console.log(body);
+
+    const mainbox = document.createElement('div');
+    mainbox.className = 'mainbox';
+
+    body.appendChild(mainbox);
+
+    Object.keys(empData).map((emp,index) => {
+        const empbox = document.createElement('div');
+        empbox.className = `emp ${index + 1}`;
+
+        const h2 = document.createElement('h2');
+        h2.innerHTML = `Name: ${empData [emp].name}`;
+       
+        const h3 = document.createElement('h3');
+        h3.innerHTML = `Employee Id: ${empData [emp].empId}`;
+
+        const addBox = document.createElement('div');
+        addBox.className = 'addressBox';
+
+        const h32 = document.createElement('h3');
+        h3.innerHTML = 'Address:';
+
+        addBox.appendChild(h32);
+
+        Object.keys(empData[emp].Address).map((add) => {
+            const addComp = document.createElement('p');
+            addComp.innerHTML = `<b>${add}:</b> ${empData[emp].Address}`;
+
+            addBox.appendChild(addComp);
+        });
+
+
+        const interests = document.createElement('p');
+        const intheading = document.createElement('span');
+        intheading.innerHTML = '<strong>Interests: </strong>';
+        
+
+        interests.appendChild(intheading);
+        empData[emp].Interests.map((interest,index) => {
+            const interestsLength = empData[emp].Interests.length;
+            const eachInterest = document.createElement('span');
+
+            if(index+1 !== interestsLength){
+                eachInterest.innerHTML = `${interest},`;
+            }else{
+                eachInterest.innerHTML =`${interest}`;
+            }
+
+            interests .appendChild(eachInterest)
+        });
+
+
+
+        empbox.appendChild(h2);
+        empbox.appendChild(h3);
+        empbox.appendChild(addBox);
+        empbox.appendChild(interests);
+        mainbox.appendChild(empbox);
+
+
+
+
+    });
+
+    console.log(Object.keys(empData));
+    </script>
+</body>
+</html>

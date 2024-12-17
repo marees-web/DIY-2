@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 100%;
+            height: 600px;
+            border: 2px solid black;
+        }
+        .navbar{
+            padding: 30px;
+            background-color: red;
+            margin: auto;
+        }
+        .font{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: white;
+            color: red;
+            font-size: 26px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+           
+        }
+        
+        .largebox{
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            align-items: center;
+
+           
+
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <div class="font">e!</div>
+        </div>
+        </div>
+        <div class="largebox">
+           
+           
+            
+        </div>
+    </div>
+    <script>
+        const largeBox = document.querySelector(".largebox")
+        let arr =[
+            {name:'ragil',empId:2345,mailId:'mmm@gmail.com'},
+            {name:'sagil',empId:2305,mailId:'mum@gmail.com'},
+            {name:'gagil',empId:2385,mailId:'mym@gmail.com'},
+            {name:'bagil',empId:2395,mailId:'mjm@gmail.com'},
+            {name:'lagil',empId:2375,mailId:'mlm@gmail.com'},
+
+        ];
+
+      arr.map((item) =>{
+        const div = document.createElement('div');
+        const h2= document.createElement('h2');
+        h2.innerHTML =item.name;
+        const h3 = document.createElement('h3');
+        h3.innerHTML =item.empId;
+        const p =document.createElement('p');
+        p.innerHTML =item.mailId;
+        const button = document.createElement('button');
+        button.innerHTML = 'Delete';
+        button.className = 'delete-emp';
+        div.appendChild(h2);
+        div.appendChild(h3);
+        div.appendChild(p);
+        div.appendChild(button);
+        div.style.padding ='0.5rem';
+        div.style.border = '2px solid blue';
+        div.style.margin ='10px';
+        largeBox.appendChild(div);
+
+
+
+      });
+      largeBox.addEventListener('click',(e)=>{
+        if(e.target.className==='delete-emp'){
+            e.target.parentElement.remove();
+        }
+      });
+    </script>
+</body>
+</html>

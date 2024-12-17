@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class restaurantManager{
+            restaurantList = [
+                {
+                    id:1,
+                    restaurantName:'KFC',
+                    address:'anand vibar',
+                    city:'mumbai',
+                },
+                {
+                    id:2,
+                    restaurantName:'DFC',
+                    address:'anand Nagar',
+                    city:'pune',
+                },
+                {
+                    id:3,
+                    restaurantName:'PizzaOut',
+                    address:'Vikas vibar',
+                    city:'salem',
+                },
+                {
+                    id:4,
+                    restaurantName:'Dominos',
+                    address:'sasu vibar',
+                    city:'pune',
+                },
+                {
+                    id:5,
+                    restaurantName:'Dine-In',
+                    address:'diliaibar',
+                    city:'pune',
+                }
+                
+            ];
+
+            printAllRestaurantNames = () => {
+                return this.restaurantList.map((restaurant) => restaurant.restaurantName);
+            };
+
+            filterRestaurantByCity = (cityName) => {
+                return this.restaurantList.filter((restaurant) => restaurant.city == cityName);
+            };
+        }
+        
+        const restaurantObj =new restaurantManager();
+        console.log(restaurantObj.printAllRestaurantNames());
+        console.log(restaurantObj.filterRestaurantByCity('pune'));
+
+
+        var d = new Date();
+        console.log(d);
+        console.log(d.getDate());
+        console.log(d.getFullYear());
+        console.log(d.getHours());
+        console.log(d.getMinutes());
+        console.log(d.getMonth());
+        console.log(d.getSeconds());
+        console.log(d.getTimezoneOffset());
+        
+        console.log('//Math');
+        var r = 22;
+        console.log(Math.PI);
+        console.log(Math.PI*Math.pow(r,2));
+        console.log(Math.random());
+        console.log(Math.floor(98.786543322));
+        console.log(Math.round(45.87965));
+        console.log(Math.ceil(43.751));
+        console.log(Math.sqrt(16));
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr= [1,2,3];
+        const arr1 = arr.push(4);
+        console.log(arr1);
+        console.log(arr);
+       const array = arr.pop();
+        console.log(array);
+        console.log(arr);
+        const array1 = arr.unshift(0);
+        console.log(arr);
+        arr.shift();
+        console.log(arr);
+          
+
+
+       
+        let arr2 = [
+            {name:'ragil',
+                id:567,
+                mailId:"mmm@gmail.com",
+                Address:{
+                    'city': 'guntur',
+                    District:'andra',pin:77675,},
+                    Interests:['read','swim','bake'],
+            },   
+            {name:'magil',
+                id:5676,
+                mailId:"mam@gmail.com",
+                Address:{
+                    'city': 'gantur',
+                    District:'andras',pin:77775,},
+                    Interests:['ready','swimi','bakey'],
+            },   
+            {name:'gagil',
+                id:5678,
+                mailId:"mfm@gmail.com",
+                Address:{
+                    'city': 'guntar',
+                    District:'andrag',pin:77685,},
+                    Interests:['readi','swims','bakes'],
+            },   
+            
+        ]
+        
+        arr2.map((ele) => {
+            console.log(ele.name);
+            let arr3 = [];
+            Object.keys(ele.Address).map((item) =>{
+                arr3.push(ele.Address[item]);
+
+            });
+            console.log(arr3);
+            ele.Interests.forEach((interest) =>{
+                console.log(interest);
+            });
+
+        });
+    </script>
+</body>
+</html>

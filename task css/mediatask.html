@@ -1,0 +1,86 @@
+<style>
+    .container{
+        margin: 50px;
+        background-color: greenyellow;
+        height: 200px;
+    }
+    .container2{
+        margin: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .one{
+        background-color: aqua;
+        margin: 5px;
+        flex-basis: 28%;
+        height: 200px;
+        flex-grow: 1;
+    }
+    .two{
+        background-color: aqua;
+        margin: 5px;
+        flex-basis: 28%;
+        height: 200px;  
+         flex-grow: 1;
+    }
+    .tree{
+        background-color: aqua;
+        margin: 5px;
+        flex-basis: 28%;
+        height: 200px;
+        flex-grow: 1;
+    }
+    .container3{
+        margin: 50px;
+        display: flex;
+        flex-wrap: wrap;
+       justify-content: space-around;
+    }
+    .four{
+        margin: 5px;
+        background-color: blue;
+        height: 100px;
+        flex-basis: 23%;
+
+
+}
+@media screen  and (max-width:600px){
+    .one{flex-basis: 90%;}
+    .two{flex-basis: 90%;}
+    .tree{flex-basis: 90%;}
+}
+@media screen  and (max-width:400px){
+    .one{flex-basis: 90%;}
+    .two{flex-basis: 90%;}
+    .tree{flex-basis: 90%;}
+}
+@media screen  and (max-width:600px){
+    .four{flex-basis: 40%;}
+   
+}
+@media screen  and (max-width:400px){
+    .four{flex-basis: 90%;}
+   
+}   
+
+</style>
+
+
+
+
+
+
+<div class="container"
+></div>
+<div class="container2">
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="tree"></div>
+</div>
+<div class="container3">
+    <div class="four"></div>
+    <div class="four"></div>
+    <div class="four"></div>
+    <div class="four"></div>
+</div>

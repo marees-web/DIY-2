@@ -1,0 +1,51 @@
+<style>
+    div{
+        margin: 50px;
+        background-color: black;
+        padding: 50px;
+
+    }
+    h1{
+        background-color: aqua;
+        color: white;
+    }
+    @media screen  and (min-width:400px){ 
+        .two{background-color: red;} }
+    
+        
+    
+     @media screen  and (min-width:600px){ 
+        .two{background-color: blue;}
+    } 
+    @media screen  and (min-width:900px){ 
+        .two{background-color:blueviolet;}
+    } 
+        
+    
+     @media screen  and (max-width:900px){ 
+        .one{background-color: red;}
+    
+    }
+        
+    @media screen  and (max-width:600px){ 
+        .one{background-color: blue;}
+    
+    }
+    @media screen  and (max-width:400px){ 
+        .one{background-color: blueviolet;}
+    
+    }
+        
+    
+</style>
+
+
+
+
+<div class="two">
+    <h1>min-width</h1>
+</div>
+
+<div class="one">
+    <h1>max-width</h1>
+</div>

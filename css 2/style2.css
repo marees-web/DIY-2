@@ -1,0 +1,117 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.numbers{
+    background-color: black;
+    
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap ;
+    margin: 50px;
+    justify-content: space-between;
+}
+.one{
+    background-color: aqua;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    margin: 10px;
+}
+.two{
+    background-color: aqua;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    margin: 10px;
+}
+.tree{
+    background-color: aqua;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    margin: 10px;
+}
+.container{
+   
+    background-color: greenyellow;
+    margin: 50px;
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex-flow: row;
+    justify-content: flex-start;
+}
+.a{
+    width: 200px;
+    height: 100px;
+    background-color: black;
+    margin: 50px;
+}
+
+.b{
+    width: 200px;
+    height: 100px;
+    background-color: black;
+    margin: 50px;
+}
+.c{
+    width: 200px;
+    height: 100px;
+    background-color: black;
+    margin: 50px;
+}
+.d{
+    width: 200px;
+    height: 100px;
+    background-color: black;
+    margin: 50px;
+}
+.box{
+   
+    padding: 20px;
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex-flow: row;
+   
+
+
+}
+h1{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+}
+.con2{
+    background-color: greenyellow;
+    padding: 50px;
+    display: flex;
+    margin: 50px;
+}
+.f{
+    background-color: black;
+    color: white;
+    padding: 25px;
+    margin: 10px;
+    flex-grow: 2;
+}
+.g{
+    background-color: black;
+    color: white;
+    padding: 25px;
+    margin: 10px;
+    flex-grow: 2;
+}
+.l{
+    background-color: black;
+    color: white;
+    padding: 25px;
+    margin: 10px;
+    flex-grow: 2;
+}

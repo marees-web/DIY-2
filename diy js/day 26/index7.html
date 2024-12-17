@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const personName = 'giris';
+        const age = 25;
+        localStorage.setItem('name',personName);
+        localStorage.setItem('age',age);
+
+
+        localStorage.removeItem('age');
+
+        let name= localStorage.getItem('name');
+        console.log(name);
+
+        sessionStorage.setItem('name',personName);
+        sessionStorage.setItem('age',age);
+
+
+        let arr=['ragil','sikandar','anul','anuj'];
+
+        localStorage.setItem('employees',JSON.stringify(arr));
+
+        const newArr= localStorage.getItem('employees');
+        console.log(newArr);
+        console.log(JSON.parse(newArr));
+
+    </script>
+</body>
+</html>
